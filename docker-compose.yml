@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  src:
+    build:
+      context: .
+    ports:
+    - "55400:55400"
+    volumes:
+    - ./src:/src
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:55400"
